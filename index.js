@@ -1,20 +1,20 @@
+class Dog {
+  constructor(name) {
+    this._name = name;
+  }
 
-function bark(animal) {
-  if (animal === "cat") {
-    console.log("Miaaawww")
-  } else {
-    console.log("Woef! Woef!!!")
+  introduceDog() {
+    console.log('This is baby dog ' + this._name + '!');
+  }
+
+  static bark() {
+    console.log('Woof! ...Woof!!' + " He barks 3 times  at a cat.");
   }
 }
-bark();
 
+const myDog = new Dog('Lesly');
+//introduce a Dog
+myDog.introduceDog();
 
-function Max(name) {
-  console.log("Dogs name is Max.");
-}
-Max();
-
-Max.bark = function() {
-  console.log(this.name + ' barks 1 time, but 3 times at a cat!')
-}
-Max.bark();
+// Calling the dog:
+Dog.bark();
